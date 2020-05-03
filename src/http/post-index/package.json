@@ -1,0 +1,7 @@
+{
+  "name": "post-index",
+  "dependencies": {
+    "@architect/functions": "^3.9.0",
+    "shortid": "^2.2.15"
+  }
+}

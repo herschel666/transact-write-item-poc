@@ -1,0 +1,16 @@
+{
+  "name": "transact-write-item-poc",
+  "scripts": {
+    "postinstall": "arc hydrate",
+    "test": "ava"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@architect/architect": "^6.3.5"
+  },
+  "devDependencies": {
+    "ava": "^3.8.1",
+    "node-fetch": "^2.6.0",
+    "prettier": "^2.0.5"
+  }
+}

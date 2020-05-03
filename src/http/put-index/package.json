@@ -1,0 +1,6 @@
+{
+  "name": "put-index",
+  "dependencies": {
+    "@architect/functions": "^3.9.0"
+  }
+}
