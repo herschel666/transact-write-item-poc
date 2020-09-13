@@ -28,3 +28,19 @@ see it fail.
 
 If you deploy that app to AWS, you'll be able to verify that you can in fact make a `PUT`-call to `/` and do the update of the
 email address.
+
+## UPDATE 2020-09-13
+
+Circumvent this issue and get DynamoDB's complete feature set locally by downloading [AWS's DynamoDB for local dev](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html), start it with the command…
+
+```
+java -Djava.library.path=./DynamoDBLocal_lib -jar ./DynamoDBLocal.jar -sharedDb -inMemory -port 4444
+```
+
+…and have Architect's Sandbox know that there's a DynamoDB, by starting it with the command…
+
+```
+ARC_TABLES_PORT=4444 ARC_DB_EXTERNAL=true npx arc sandbox
+```
+
+If you'd like to persist the data in the DynamoDB, remove the `-inMemory`-flag from its start-command.
